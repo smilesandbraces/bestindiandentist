@@ -513,9 +513,35 @@ p {
     font-weight: 600;
 }
 
-.doctor-website-link{display:inline-flex;align-items:center;gap:var(--space-1);
-color:var(--primary-gold);font-weight:600;transition:color var(--transition-fast)}
-.doctor-website-link:hover{color:var(--primary-gold-dark)}
+/* ─── Add this up in your :root ─── */
+:root {
+  /* …existing vars… */
+  --pill-font-size: 0.8rem;    /* match your .credential pills */
+  --pill-gap: 0.25rem;         /* small gap between icon & text */
+}
+
+/* ─── Then swap in these rules at the bottom ─── */
+.doctor-website-link {
+  display: inline-flex;
+  align-items: center;                /* icon + text baseline align */
+  gap: var(--pill-gap);               /* tighten up the spacing */
+  margin-top: var(--pill-gap);        /* breathing room under .credentials */
+  color: var(--primary-gold);
+  font-size: var(--pill-font-size);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.doctor-website-link i {
+  font-size: 1em;                     /* icon same size as text */
+}
+
+.doctor-website-link:hover,
+.doctor-website-link:focus {
+  color: var(--primary-gold-dark);
+}
+
 
 @keyframes slideInLeft {
     from { opacity: 0; transform: translateX(-50px); }
