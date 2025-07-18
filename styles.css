@@ -454,7 +454,7 @@ p {
 .doctor-card {
     background: var(--white);
     border-radius: var(--border-radius-large);
-    padding: 2rem;
+    padding: 1rem;
     box-shadow: var(--shadow-large);
     text-align: center;
     position: relative;
