@@ -513,6 +513,10 @@ p {
     font-weight: 600;
 }
 
+.doctor-website-link{display:inline-flex;align-items:center;gap:var(--space-1);
+color:var(--primary-gold);font-weight:600;transition:color var(--transition-fast)}
+.doctor-website-link:hover{color:var(--primary-gold-dark)}
+
 @keyframes slideInLeft {
     from { opacity: 0; transform: translateX(-50px); }
     to { opacity: 1; transform: translateX(0); }
